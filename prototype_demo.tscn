@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://dir35rdrh2rvs"]
+
+[ext_resource type="MeshLibrary" uid="uid://b3d3643qgupy6" path="res://prototype_tile.tres" id="2_ym1xo"]
+[ext_resource type="MeshLibrary" uid="uid://c7d8eth1ggcjf" path="res://prototype_wall.tres" id="3_0bfce"]
+[ext_resource type="MeshLibrary" uid="uid://c3c34d3ak0bpb" path="res://prototype_corner.tres" id="4_6u4ka"]
+[ext_resource type="MeshLibrary" uid="uid://5r2jjqajhkof" path="res://prototype_door.tres" id="5_wgh00"]
+[ext_resource type="MeshLibrary" uid="uid://bk27huhkwdcyk" path="res://prototype_item.tres" id="6_u8mdu"]
+
+[node name="Demo" type="Node3D"]
+
+[node name="Floor_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("2_ym1xo")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65534, 1, 4, 65535, 1, 4, 0, 1, 4, 1, 1, 4, 2, 1, 4, 2, 2, 4, 2, 3, 4, 2, 4, 4, 1, 5, 4, 1, 4, 4, 65534, 2, 4, 65534, 3, 4, 65535, 3, 4, 65535, 4, 4, 0, 4, 4, 0, 3, 4, 1, 3, 4, 1, 2, 4, 0, 2, 4, 65535, 2, 4, 0, 5, 4, 0, 6, 4, 1, 6, 4, 2, 6, 1048578, 3, 6, 1048578, 4, 6, 1048578, 5, 6, 4, 5, 5, 4, 6, 6, 4, 6, 4, 4, 6, 5, 4, 6, 3, 4, 6, 2, 4, 5, 4, 4, 5, 3, 4, 7, 6, 1048578, 8, 6, 1048578, 9, 6, 1048578, 10, 6, 1048578, 11, 6, 1048578, 2, 7, 1048578, 2, 8, 1048578, 3, 8, 1048578, 4, 8, 1048578, 5, 8, 4, 6, 8, 4, 5, 7, 4, 4, 7, 1048578, 3, 7, 1048578, 6, 7, 4, 7, 5, 1048579, 7, 4, 1048579, 8, 4, 1048579, 8, 3, 1048579, 8, 2, 1048579, 7, 2, 1048579, 7, 3, 1048579, 8, 5, 1048579, 7, 7, 1048579, 7, 8, 1048579, 8, 8, 1048579, 8, 7, 1048579, 2, 5, 1048579, 3, 5, 1048579, 4, 5, 1048579, 4, 4, 1048579, 3, 4, 1048579, 3, 3, 1048579, 4, 3, 1048579, 3, 2, 1048579, 4, 2, 1048579, 5, 2, 1048579)
+}
+
+[node name="Wall_N_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("3_0bfce")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65534, 1, 0, 65535, 1, 6, 0, 1, 4, 1, 1, 6, 2, 1, 0, 7, 6, 0, 8, 6, 0, 9, 6, 0, 10, 6, 0, 11, 6, 0, 2, 6, 0, 3, 6, 6, 4, 6, 0, 5, 3, 0, 6, 2, 0)
+}
+
+[node name="Wall_S_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("3_0bfce")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65534, 3, 655360, 65535, 4, 655360, 0, 6, 655360, 1, 6, 655360, 2, 8, 655360, 3, 8, 655360, 4, 8, 655360, 5, 8, 655360, 6, 8, 655360, 7, 6, 655360, 8, 6, 655360, 9, 6, 655360, 10, 6, 655360, 11, 6, 655360, 2, 4, 655360)
+}
+
+[node name="Wall_W_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("3_0bfce")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65534, 1, 1048576, 65534, 2, 1048576, 65534, 3, 1048576, 5, 3, 1048576, 5, 4, 1048576, 5, 5, 1048576, 0, 5, 1048576, 0, 6, 1048576, 65535, 4, 1048576, 2, 7, 1048576, 2, 8, 1048576, 6, 2, 1048576)
+}
+
+[node name="Wall_E_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("3_0bfce")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(2, 1, 1441792, 2, 2, 1441792, 2, 3, 1441792, 2, 4, 1441792, 6, 2, 1441798, 6, 3, 1441792, 6, 4, 1441798, 6, 5, 1441792, 1, 5, 1441792, 6, 7, 1441792, 6, 8, 1441798, 11, 6, 1441794, 1, 6, 1441794, 6, 6, 1441794, 4, 6, 1441792, 4, 7, 1441792, 4, 8, 1441794, 7, 8, 1048581)
+}
+
+[node name="Corner_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("4_6u4ka")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(6, 8, 1441798, 11, 6, 1441793, 4, 8, 1441794, 7, 8, 1048581, 65535, 2, 1441792, 0, 2, 1441792, 65535, 3, 1441792, 0, 3, 1441792, 2, 1, 1441793, 65534, 1, 1, 3, 7, 1441793, 2, 8, 1048577, 7, 5, 1048577, 7, 6, 1, 7, 7, 1, 6, 4, 1, 11, 7, 1441793)
+}
+
+[node name="Door_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("5_wgh00")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(6, 6, 1441792, 4, 8, 1441792, 2, 6, 1048577, 11, 6, 1441794)
+}
+
+[node name="Item_4x4" type="GridMap" parent="."]
+mesh_library = ExtResource("6_u8mdu")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false

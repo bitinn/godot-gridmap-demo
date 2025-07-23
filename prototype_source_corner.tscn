@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://co15y6wursemk"]
+
+[ext_resource type="PackedScene" uid="uid://bddg5in748x65" path="res://assets/kit/gltf/Pillar_A.gltf" id="13_o6s38"]
+[ext_resource type="PackedScene" uid="uid://doawo686i14e2" path="res://assets/kit/gltf/Pillar_B.gltf" id="14_q13x1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cy1gl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Pillar_A2" parent="." instance=ExtResource("13_o6s38")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pillar_A2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_A2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Pillar_B2" parent="." instance=ExtResource("14_q13x1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pillar_B2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_B2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")

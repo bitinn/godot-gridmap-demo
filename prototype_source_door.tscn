@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfshmolaywbq4"]
+
+[ext_resource type="PackedScene" uid="uid://brky7372lelvu" path="res://assets/kit/gltf/Door_A.gltf" id="4_osevf"]
+[ext_resource type="PackedScene" uid="uid://dapmmjfrf0fv8" path="res://assets/kit/gltf/Door_A_Decorated.gltf" id="5_66ece"]
+[ext_resource type="PackedScene" uid="uid://cfxawqhno7o6l" path="res://assets/kit/gltf/Door_B.gltf" id="6_4usa1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cy1gl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Door_A2" parent="." instance=ExtResource("4_osevf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_A2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_A2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Door_A_Decorated2" parent="." instance=ExtResource("5_66ece")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_A_Decorated2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_A_Decorated2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Door_B2" parent="." instance=ExtResource("6_4usa1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_B2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_B2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")

@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://nm3efwl6cn61"]
+
+[ext_resource type="PackedScene" uid="uid://d0xewmiivhtsw" path="res://assets/kit/gltf/Cube_Prototype_Small.gltf" id="3_tc2ql"]
+[ext_resource type="PackedScene" uid="uid://bc6b01n4c3xeb" path="res://assets/kit/gltf/Dummy_Base.gltf" id="7_6mwxc"]
+[ext_resource type="PackedScene" uid="uid://brabx8vhcegkv" path="res://assets/kit/gltf/Locker.gltf" id="11_gqavx"]
+[ext_resource type="PackedScene" uid="uid://0xs2g5vfxl8u" path="res://assets/kit/gltf/Locker_Decorated.gltf" id="12_l420a"]
+[ext_resource type="PackedScene" uid="uid://brx3rsvfirt5n" path="res://assets/kit/gltf/Wall_Half.gltf" id="18_ymya0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cy1gl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Cube_Prototype_Small2" parent="." instance=ExtResource("3_tc2ql")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Prototype_Small2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Prototype_Small2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Dummy_Base2" parent="." instance=ExtResource("7_6mwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Dummy_Base2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy_Base2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Locker2" parent="." instance=ExtResource("11_gqavx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Locker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Locker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Locker_Decorated2" parent="." instance=ExtResource("12_l420a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Locker_Decorated2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Locker_Decorated2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Half2" parent="." instance=ExtResource("18_ymya0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Half2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Half2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")

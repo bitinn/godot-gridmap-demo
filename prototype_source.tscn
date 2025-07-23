@@ -1,0 +1,194 @@
+[gd_scene load_steps=23 format=3 uid="uid://krukh2jy4gi1"]
+
+[ext_resource type="PackedScene" uid="uid://f2oiw85030rp" path="res://assets/kit/gltf/Cube_Prototype_Large_A.gltf" id="1_cy1gl"]
+[ext_resource type="PackedScene" uid="uid://ckepiq42yjcja" path="res://assets/kit/gltf/Cube_Prototype_Large_B.gltf" id="2_ar0cy"]
+[ext_resource type="PackedScene" uid="uid://d0xewmiivhtsw" path="res://assets/kit/gltf/Cube_Prototype_Small.gltf" id="3_jmxwx"]
+[ext_resource type="PackedScene" uid="uid://brky7372lelvu" path="res://assets/kit/gltf/Door_A.gltf" id="4_tfwk5"]
+[ext_resource type="PackedScene" uid="uid://dapmmjfrf0fv8" path="res://assets/kit/gltf/Door_A_Decorated.gltf" id="5_ga620"]
+[ext_resource type="PackedScene" uid="uid://cfxawqhno7o6l" path="res://assets/kit/gltf/Door_B.gltf" id="6_k2pwv"]
+[ext_resource type="PackedScene" uid="uid://bc6b01n4c3xeb" path="res://assets/kit/gltf/Dummy_Base.gltf" id="7_u0kfl"]
+[ext_resource type="PackedScene" uid="uid://dj6vi67lvvo1x" path="res://assets/kit/gltf/Floor.gltf" id="8_rmrnx"]
+[ext_resource type="PackedScene" uid="uid://ctwinpbnlaaun" path="res://assets/kit/gltf/Floor_Dirt.gltf" id="9_qljnp"]
+[ext_resource type="PackedScene" uid="uid://5tx7swgfwm1y" path="res://assets/kit/gltf/Floor_Prototype.gltf" id="10_pwpue"]
+[ext_resource type="PackedScene" uid="uid://brabx8vhcegkv" path="res://assets/kit/gltf/Locker.gltf" id="11_mhkbd"]
+[ext_resource type="PackedScene" uid="uid://0xs2g5vfxl8u" path="res://assets/kit/gltf/Locker_Decorated.gltf" id="12_ndt15"]
+[ext_resource type="PackedScene" uid="uid://bddg5in748x65" path="res://assets/kit/gltf/Pillar_A.gltf" id="13_7o2tp"]
+[ext_resource type="PackedScene" uid="uid://doawo686i14e2" path="res://assets/kit/gltf/Pillar_B.gltf" id="14_0v0pt"]
+[ext_resource type="PackedScene" uid="uid://ddwvnp13iook5" path="res://assets/kit/gltf/Wall.gltf" id="15_q5uhq"]
+[ext_resource type="PackedScene" uid="uid://dh04p74cd6mfm" path="res://assets/kit/gltf/Wall_Decorated.gltf" id="16_uxb7r"]
+[ext_resource type="PackedScene" uid="uid://w6gw6h2b6snp" path="res://assets/kit/gltf/Wall_Doorway.gltf" id="17_r2v02"]
+[ext_resource type="PackedScene" uid="uid://brx3rsvfirt5n" path="res://assets/kit/gltf/Wall_Half.gltf" id="18_x4lsx"]
+[ext_resource type="PackedScene" uid="uid://cxwapmnitdi10" path="res://assets/kit/gltf/Wall_Target.gltf" id="19_idv45"]
+[ext_resource type="PackedScene" uid="uid://bbye18a6blcil" path="res://assets/kit/gltf/Wall_Window_Closed.gltf" id="20_i0qp2"]
+[ext_resource type="PackedScene" uid="uid://62vr8k6aquxc" path="res://assets/kit/gltf/Wall_Window_Open.gltf" id="21_7vuap"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cy1gl"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Cube_Prototype_Large_A2" parent="." instance=ExtResource("1_cy1gl")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Prototype_Large_A2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Prototype_Large_A2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Cube_Prototype_Large_B2" parent="." instance=ExtResource("2_ar0cy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Prototype_Large_B2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Prototype_Large_B2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Cube_Prototype_Small2" parent="." instance=ExtResource("3_jmxwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Prototype_Small2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Prototype_Small2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Door_A2" parent="." instance=ExtResource("4_tfwk5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_A2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_A2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Door_A_Decorated2" parent="." instance=ExtResource("5_ga620")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_A_Decorated2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_A_Decorated2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Door_B2" parent="." instance=ExtResource("6_k2pwv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_B2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_B2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Dummy_Base2" parent="." instance=ExtResource("7_u0kfl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Dummy_Base2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy_Base2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Floor2" parent="." instance=ExtResource("8_rmrnx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Floor_Dirt2" parent="." instance=ExtResource("9_qljnp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_Dirt2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_Dirt2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Floor_Prototype2" parent="." instance=ExtResource("10_pwpue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_Prototype2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_Prototype2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Locker2" parent="." instance=ExtResource("11_mhkbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Locker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Locker2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Locker_Decorated2" parent="." instance=ExtResource("12_ndt15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 55)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Locker_Decorated2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Locker_Decorated2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Pillar_A2" parent="." instance=ExtResource("13_7o2tp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pillar_A2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_A2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Pillar_B2" parent="." instance=ExtResource("14_0v0pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pillar_B2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar_B2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall2" parent="." instance=ExtResource("15_q5uhq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 70)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Decorated2" parent="." instance=ExtResource("16_uxb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Decorated2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Decorated2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Doorway2" parent="." instance=ExtResource("17_r2v02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Doorway2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Doorway2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Half2" parent="." instance=ExtResource("18_x4lsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 85)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Half2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Half2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Target2" parent="." instance=ExtResource("19_idv45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 90)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Target2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Target2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Window_Closed2" parent="." instance=ExtResource("20_i0qp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 95)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Window_Closed2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Window_Closed2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
+
+[node name="Wall_Window_Open2" parent="." instance=ExtResource("21_7vuap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall_Window_Open2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall_Window_Open2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cy1gl")
